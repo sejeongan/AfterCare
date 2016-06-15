@@ -9,7 +9,7 @@
 			<br>
 			
 			<#list result as user>
-			Id : ${user.ID}  Name : ${user.NAME}<br>
+				Id : ${user.ID} Name : ${user.NAME}<br>
 			</#list>
 			
 		</div>

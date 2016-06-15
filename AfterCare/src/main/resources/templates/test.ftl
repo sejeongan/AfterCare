@@ -12,5 +12,8 @@
 			HELL YEAH ${name}! Your name's length is not 4
 			</#if>
 		</div>
+		<form action="/logout" method="post">
+			<input type="submit" value="로그아웃"/>
+		</form>
 	</body>
 </html>

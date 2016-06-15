@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.lifesymantics.mapper.TestMapper">
+    <select id="select" resultType="java.util.HashMap">
+        SELECT CUST_ID AS ID
+        		,CUST_NAME AS NAME 
+        FROM AC_CUST
+    </select>
+    <select id="selectLoginUser" resultType="java.util.HashMap">
+        SELECT A.CUST_ID AS ID
+        		,A.CUST_NAME AS NAME
+        		,B.CUST_ROLE AS ROLE 
+        FROM AC_CUST A, AC_CUST_ROLE B
+        WHERE A.CUST_ID = B.CUST_ID
+        AND A.CUST_ID = #{id}
+        AND A.CUST_PW = #{pw}
+    </select>
+</mapper>
